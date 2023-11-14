@@ -15,13 +15,22 @@ class _HomeScreenState extends State<HomeScreen> {
   zoom: 14,
   );
   final List<Marker> myMarker= [];
-  final List<Marker>  markerList=[
-    const Marker(
+  final List<Marker>  markerList= const[
+   Marker(
       markerId: MarkerId("first"),
       position:  LatLng(28.65701173874114, 77.23689340564452),
-      infoWindow: InfoWindow(title: 'My position'),
-
-    )
+      infoWindow: InfoWindow(title: 'Lal Quila'),
+    ),
+    Marker(
+      markerId: MarkerId("first"),
+      position:  LatLng(28.655204116077005, 77.23221563323246),
+      infoWindow: InfoWindow(title: 'Khatu Shaym Temple'),
+    ),
+    Marker(
+      markerId: MarkerId("first"),
+      position:  LatLng(28.6620955103881, 77.23011278141419),
+      infoWindow: InfoWindow(title: 'Delhi junction'),
+    ),
   ];
   @override
   void initState() {
