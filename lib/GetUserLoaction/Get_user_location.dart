@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'package:task_hyginiee/places/Places.dart';
 
 class GetUserLocation extends StatefulWidget {
   const GetUserLocation({Key? key}) : super(key: key);
@@ -85,7 +86,7 @@ class _GetUserLocationState extends State<GetUserLocation> {
             IconButton(
               icon: Icon(Icons.search),
               onPressed: () {
-                // Handle search functionality
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>Places()));
 
               },
             ),
