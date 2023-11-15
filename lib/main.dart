@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:task_hyginiee/GetUserLoaction/Get_user_location.dart';
 
 import 'MyHomeScreen/HomeScreen.dart';
 
@@ -13,12 +14,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home : HomeScreen(),
+      home : GetUserLocation(),
     );
   }
 }

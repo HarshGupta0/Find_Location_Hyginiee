@@ -22,12 +22,12 @@ class _HomeScreenState extends State<HomeScreen> {
       infoWindow: InfoWindow(title: 'Lal Quila'),
     ),
     Marker(
-      markerId: MarkerId("first"),
+      markerId: MarkerId("second"),
       position:  LatLng(28.655204116077005, 77.23221563323246),
       infoWindow: InfoWindow(title: 'Khatu Shaym Temple'),
     ),
     Marker(
-      markerId: MarkerId("first"),
+      markerId: MarkerId("Third"),
       position:  LatLng(28.6620955103881, 77.23011278141419),
       infoWindow: InfoWindow(title: 'Delhi junction'),
     ),
@@ -41,6 +41,11 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(child: Scaffold(
+      appBar: AppBar(
+        title:Text("MAP",style: TextStyle(fontWeight: FontWeight.bold,color: Colors.blue,letterSpacing: 2),),
+        centerTitle: true,
+        backgroundColor: Colors.blue.shade200.withOpacity(.4),
+      ),
       body: GoogleMap(
         initialCameraPosition:_initialPosition,
         markers: Set<Marker>.of(myMarker),
